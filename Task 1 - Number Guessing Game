@@ -25,3 +25,4 @@ int main() {
             std::cout << "Congratulations Buddy You guessed the number " << target_Number << " in " << attempts << " attempts." << std::endl;
         }
     }
+}
