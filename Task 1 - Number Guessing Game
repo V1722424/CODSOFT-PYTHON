@@ -1,28 +1,34 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+def addition(n1, n2):
+	return n1 + n2
+def subtraction(n1, n2):
+	return n1 - n2
+def multiplication(n1, n2):
+	return n1 * n2
+def division(n1, n2):
+	return n1 / n2
+print("Please select operation -\n" \
+	"1. addition\n" \
+	"2. subtraction\n" \
+	"3. multiplication\n" \
+	"4. division\n")
+option  = int(input("Select operations form 1, 2, 3, 4 :"))
+num_1 = int(input("Enter the first number here: "))
+num_2 = int(input("Enter the second number here: "))
 
-int main() {
-    srand(time(0));  
-    int target_Number = rand() % 100 + 1;  
-    int guess = 0;
-    int attempts = 0;
+if option == 1:
+	print(num_1, "+", num_2, "=",
+addition(num_1, num_2))
 
-    std::cout << "Hey Buddy,Welcome to the Number Guessing Game!" << std::endl;
-    std::cout << "I have picked a random number between 1 and 100.can you guess it?" << std::endl;
+elif option == 2:
+	print(num_1, "-", num_2, "=",
+subtract(num_1, num_2))
 
-    while (guess != target_Number) {
-        std::cout << "Enter your guess: ";
-        std::cin >> guess;
+elif option == 3:
+	print(num_1, "*", num_2, "=",
+multiply(num_1, num_2))
 
-        attempts++;
-
-        if (guess < target_Number) {
-            std::cout << "A little low! Try again." << std::endl;
-        } else if (guess > target_Number) {
-            std::cout << "A little high! Try again." << std::endl;
-        } else {
-            std::cout << "Congratulations Buddy You guessed the number " << target_Number << " in " << attempts << " attempts." << std::endl;
-        }
-    }
-}
+elif option == 4:
+	print(num_1, "/", num_2, "=",
+divide(num_1, num_2))
+else:
+	print("Invalid input")
